@@ -1,0 +1,217 @@
+[{
+  "tradeActions": [
+    "buy",
+    "sell"
+  ],
+  "operands": [
+    "bid_open_num",
+    "bid_close_num",
+    "bid_high_num",
+    "bid_low_num",
+    "ask_open_num",
+    "ask_close_num",
+    "ask_high_num",
+    "ask_low_num",
+    "mid_open_num",
+    "mid_close_num",
+    "mid_high_num",
+    "mid_low_num",
+    "volume"
+  ],
+  "operators": [
+    {
+      "name": "Gt",
+      "fullName": "Greater than",
+      "symbol": ">"
+    },
+    {
+      "name": "Lt",
+      "fullName": "Less than",
+      "symbol": "<"
+    }
+  ],
+  "instruments": [
+    "AudCad",
+    "ChfJpy",
+    "EurAud",
+    "EurCad",
+    "EurChf",
+    "EurGbp",
+    "EurHkd",
+    "EurJpy",
+    "EurNzd",
+    "EurSgd",
+    "EurUsd",
+    "GbpAud",
+    "GbpCad"
+  ],
+  "indicators": [
+    {
+      "name": "CdlGravestoneDoji",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHammer",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHangingMan",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHarami",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHaramiCross",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHignWave",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHikkake",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHikkakeMod",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlHomingPigeon",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlIdentical3Crows",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlInNeck",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlInvertedHammer",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlKicking",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlKickingByLength",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlLadderBottom",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlLongLeggedDoji",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlLongLine",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlMarubozu",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlMatchingLow",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlMatHold",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "CdlMorningDojiStar",
+      "fullName": "",
+      "description": ""
+    },
+
+    {
+      "name": "HtDcPeriod",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "HtDcPhase",
+      "fullName": "",
+      "description": ""
+    },
+
+    {
+      "name": "Macd",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "MacdHistogram",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "MacdSignal",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "RocR100",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "Rsi",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "Sar",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "Variance",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "WclPrice",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "WillR",
+      "fullName": "",
+      "description": ""
+    },
+    {
+      "name": "Wma",
+      "fullName": "",
+      "description": ""
+    }
+  ]
+}]

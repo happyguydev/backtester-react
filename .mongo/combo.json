@@ -1,0 +1,14 @@
+{
+  "user_id": "gere",
+  "history": [],
+  "points": 11,
+  "instrument": "AudCad",
+  "trade_action": 0,
+  "strategies": [
+    {
+      "indicator": "rsi",
+      "operator": ">",
+      "operand": "80.0"
+    }
+  ]
+}

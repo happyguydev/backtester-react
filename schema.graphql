@@ -1,0 +1,361 @@
+input ComboInsertInput {
+  strategies: [ComboStrategyInsertInput]
+  trade_action: Int
+  user_id: String
+  _id: ObjectId
+  html: String
+  instrument: String
+  points: Float
+}
+input FrontendIndicatorInsertInput {
+  name: String
+  description: String
+  fullName: String
+}
+input FrontendIndicatorUpdateInput {
+  name_unset: Boolean
+  description: String
+  description_unset: Boolean
+  fullName: String
+  fullName_unset: Boolean
+  name: String
+}
+type Combo {
+  _id: ObjectId
+  html: String
+  instrument: String
+  points: Float
+  strategies: [ComboStrategy]
+  trade_action: Int
+  user_id: String
+}
+input FrontendIndicatorQueryInput {
+  fullName_lt: String
+  description_lte: String
+  fullName_gt: String
+  name_gte: String
+  AND: [FrontendIndicatorQueryInput!]
+  description: String
+  fullName_gte: String
+  fullName: String
+  description_gt: String
+  description_nin: [String]
+  name: String
+  description_ne: String
+  fullName_lte: String
+  name_nin: [String]
+  name_exists: Boolean
+  name_in: [String]
+  description_in: [String]
+  description_lt: String
+  fullName_ne: String
+  OR: [FrontendIndicatorQueryInput!]
+  name_lte: String
+  description_exists: Boolean
+  fullName_nin: [String]
+  fullName_exists: Boolean
+  description_gte: String
+  name_lt: String
+  name_gt: String
+  name_ne: String
+  fullName_in: [String]
+}
+input FrontendQueryInput {
+  _id_lte: ObjectId
+  operands_nin: [String]
+  indicators: [FrontendIndicatorQueryInput]
+  operands: [String]
+  indicators_in: [FrontendIndicatorQueryInput]
+  _id_ne: ObjectId
+  instruments: [String]
+  instruments_nin: [String]
+  _id_nin: [ObjectId]
+  tradeActions: [String]
+  _id: ObjectId
+  operators_nin: [FrontendOperatorQueryInput]
+  tradeActions_in: [String]
+  AND: [FrontendQueryInput!]
+  indicators_exists: Boolean
+  operands_exists: Boolean
+  instruments_exists: Boolean
+  operators_exists: Boolean
+  operands_in: [String]
+  tradeActions_nin: [String]
+  indicators_nin: [FrontendIndicatorQueryInput]
+  OR: [FrontendQueryInput!]
+  operators_in: [FrontendOperatorQueryInput]
+  _id_gt: ObjectId
+  _id_gte: ObjectId
+  _id_lt: ObjectId
+  _id_in: [ObjectId]
+  instruments_in: [String]
+  tradeActions_exists: Boolean
+  _id_exists: Boolean
+  operators: [FrontendOperatorQueryInput]
+}
+input FrontendOperatorInsertInput {
+  fullName: String
+  name: String
+  symbol: String
+}
+input FrontendUpdateInput {
+  indicators: [FrontendIndicatorUpdateInput]
+  tradeActions: [String]
+  operands: [String]
+  operators: [FrontendOperatorUpdateInput]
+  _id_unset: Boolean
+  indicators_unset: Boolean
+  instruments: [String]
+  tradeActions_unset: Boolean
+  _id: ObjectId
+  instruments_unset: Boolean
+  operands_unset: Boolean
+  operators_unset: Boolean
+}
+input ComboStrategyQueryInput {
+  operand: String
+  operand_nin: [String]
+  indicator_exists: Boolean
+  operator_nin: [String]
+  operator_ne: String
+  operand_gt: String
+  AND: [ComboStrategyQueryInput!]
+  operator_gt: String
+  operator_in: [String]
+  indicator_ne: String
+  operand_ne: String
+  operator_lt: String
+  operand_exists: Boolean
+  OR: [ComboStrategyQueryInput!]
+  indicator_lte: String
+  operator_lte: String
+  indicator_gte: String
+  operand_in: [String]
+  operand_lt: String
+  operand_gte: String
+  indicator_lt: String
+  indicator_gt: String
+  operator_gte: String
+  indicator: String
+  indicator_nin: [String]
+  operator: String
+  operator_exists: Boolean
+  operand_lte: String
+  indicator_in: [String]
+}
+type InsertManyPayload {
+  insertedIds: [ObjectId]!
+}
+scalar ObjectId
+input ComboQueryInput {
+  html_in: [String]
+  _id_in: [ObjectId]
+  _id: ObjectId
+  points_in: [Float]
+  instrument_lt: String
+  user_id_exists: Boolean
+  _id_gt: ObjectId
+  _id_lt: ObjectId
+  points_gte: Float
+  html_exists: Boolean
+  OR: [ComboQueryInput!]
+  html_ne: String
+  trade_action_gt: Int
+  _id_ne: ObjectId
+  html: String
+  points_nin: [Float]
+  html_nin: [String]
+  html_lte: String
+  trade_action: Int
+  user_id_gt: String
+  points: Float
+  user_id_nin: [String]
+  strategies_exists: Boolean
+  html_gte: String
+  _id_exists: Boolean
+  trade_action_ne: Int
+  user_id_lte: String
+  trade_action_exists: Boolean
+  html_lt: String
+  user_id: String
+  user_id_in: [String]
+  _id_nin: [ObjectId]
+  trade_action_lte: Int
+  instrument_in: [String]
+  _id_lte: ObjectId
+  instrument_nin: [String]
+  user_id_lt: String
+  AND: [ComboQueryInput!]
+  points_lt: Float
+  user_id_ne: String
+  strategies_in: [ComboStrategyQueryInput]
+  html_gt: String
+  strategies: [ComboStrategyQueryInput]
+  _id_gte: ObjectId
+  trade_action_in: [Int]
+  strategies_nin: [ComboStrategyQueryInput]
+  points_exists: Boolean
+  user_id_gte: String
+  instrument_gte: String
+  trade_action_gte: Int
+  points_ne: Float
+  instrument_ne: String
+  trade_action_lt: Int
+  points_gt: Float
+  trade_action_nin: [Int]
+  instrument: String
+  instrument_lte: String
+  instrument_exists: Boolean
+  points_lte: Float
+  instrument_gt: String
+}
+type FrontendIndicator {
+  description: String
+  fullName: String
+  name: String
+}
+input ComboStrategyUpdateInput {
+  indicator: String
+  indicator_unset: Boolean
+  operand: String
+  operand_unset: Boolean
+  operator: String
+  operator_unset: Boolean
+}
+type ComboStrategy {
+  indicator: String
+  operand: String
+  operator: String
+}
+type Mutation {
+  deleteManyCombos(query: ComboQueryInput): DeleteManyPayload
+  deleteManyFrontends(query: FrontendQueryInput): DeleteManyPayload
+  deleteOneCombo(query: ComboQueryInput!): Combo
+  deleteOneFrontend(query: FrontendQueryInput!): Frontend
+  insertManyCombos(data: [ComboInsertInput!]!): InsertManyPayload
+  insertManyFrontends(data: [FrontendInsertInput!]!): InsertManyPayload
+  insertOneCombo(data: ComboInsertInput!): Combo
+  insertOneFrontend(data: FrontendInsertInput!): Frontend
+  replaceOneCombo(query: ComboQueryInput, data: ComboInsertInput!): Combo
+  replaceOneFrontend(query: FrontendQueryInput, data: FrontendInsertInput!): Frontend
+  updateManyCombos(query: ComboQueryInput, set: ComboUpdateInput!): UpdateManyPayload
+  updateManyFrontends(query: FrontendQueryInput, set: FrontendUpdateInput!): UpdateManyPayload
+  updateOneCombo(query: ComboQueryInput, set: ComboUpdateInput!): Combo
+  updateOneFrontend(query: FrontendQueryInput, set: FrontendUpdateInput!): Frontend
+  upsertOneCombo(query: ComboQueryInput, data: ComboInsertInput!): Combo
+  upsertOneFrontend(query: FrontendQueryInput, data: FrontendInsertInput!): Frontend
+}
+input ComboUpdateInput {
+  instrument: String
+  _id: ObjectId
+  strategies: [ComboStrategyUpdateInput]
+  html_unset: Boolean
+  points_inc: Float
+  points: Float
+  strategies_unset: Boolean
+  points_unset: Boolean
+  user_id: String
+  instrument_unset: Boolean
+  user_id_unset: Boolean
+  trade_action_unset: Boolean
+  html: String
+  trade_action: Int
+  trade_action_inc: Int
+  _id_unset: Boolean
+}
+input ComboStrategyInsertInput {
+  operator: String
+  indicator: String
+  operand: String
+}
+type DeleteManyPayload {
+  deletedCount: Int!
+}
+input FrontendOperatorUpdateInput {
+  name: String
+  name_unset: Boolean
+  symbol: String
+  symbol_unset: Boolean
+  fullName: String
+  fullName_unset: Boolean
+}
+type Frontend {
+  _id: ObjectId
+  indicators: [FrontendIndicator]
+  instruments: [String]
+  operands: [String]
+  operators: [FrontendOperator]
+  tradeActions: [String]
+}
+enum FrontendSortByInput {
+  _ID_ASC
+  _ID_DESC
+}
+input FrontendOperatorQueryInput {
+  name: String
+  symbol_gte: String
+  symbol_nin: [String]
+  symbol_lt: String
+  symbol: String
+  name_nin: [String]
+  fullName: String
+  name_lte: String
+  fullName_ne: String
+  name_exists: Boolean
+  fullName_exists: Boolean
+  fullName_lt: String
+  symbol_in: [String]
+  fullName_gt: String
+  name_ne: String
+  fullName_gte: String
+  symbol_exists: Boolean
+  symbol_lte: String
+  fullName_lte: String
+  symbol_ne: String
+  AND: [FrontendOperatorQueryInput!]
+  symbol_gt: String
+  fullName_in: [String]
+  OR: [FrontendOperatorQueryInput!]
+  name_gt: String
+  fullName_nin: [String]
+  name_in: [String]
+  name_lt: String
+  name_gte: String
+}
+type FrontendOperator {
+  fullName: String
+  name: String
+  symbol: String
+}
+type UpdateManyPayload {
+  matchedCount: Int!
+  modifiedCount: Int!
+}
+input FrontendInsertInput {
+  operators: [FrontendOperatorInsertInput]
+  tradeActions: [String]
+  _id: ObjectId
+  indicators: [FrontendIndicatorInsertInput]
+  instruments: [String]
+  operands: [String]
+}
+type Query {
+  combo(query: ComboQueryInput): Combo
+  combos(query: ComboQueryInput, limit: Int = 100, sortBy: ComboSortByInput): [Combo]!
+  frontend(query: FrontendQueryInput): Frontend
+  frontends(query: FrontendQueryInput, limit: Int = 100, sortBy: FrontendSortByInput): [Frontend]!
+}
+enum ComboSortByInput {
+  HTML_DESC
+  POINTS_DESC
+  USER_ID_ASC
+  _ID_ASC
+  HTML_ASC
+  INSTRUMENT_DESC
+  POINTS_ASC
+  TRADE_ACTION_ASC
+  TRADE_ACTION_DESC
+  USER_ID_DESC
+  _ID_DESC
+  INSTRUMENT_ASC
+}
